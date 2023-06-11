@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./html/checkout.html">Checkout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#admin">Admin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="intro bg-dark text-white">
+        <h1 class="display-1">Welcome to our shop</h1>
+        <p>Shop till your drop</p>
+      </div>
+    </header>
+
+    <!-- Product Section -->
+
+    <div class="container">
+      <section>
+        <div class="admin-section m-5">
+          <h2>Products Table</h2>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary my-3"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add Product
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Modal title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form">
+                      <div class="container">
+                        <div class="mb-3">
+                            <label for="title-input" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title-input" placeholder="Adidas FX">
+                        </div>
+                        <div class="mb-3">
+                            <label for="description-input" class="form-label">Description</label>
+                            <textarea class="form-control" id="description-input" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price-input" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="price-input">
+                        </div>
+                        <div class="mb-3">
+                            <label for="img-input" class="form-label">Image Link</label>
+                            <input type="text" class="form-control" id="img-input">
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary" id="addBtn">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table m-5">
+            <thead>
+              <tr>
+                <th  scope="col">ID</th>
+                <th  scope="col">Title</th>
+                <th  scope="col">Description</th>
+                <th  scope="col">Price</th>
+                <th  scope="col">Image</th>
+                <th  scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script/admin.js"></script>
+  </body>
+</html>
+
